@@ -1,12 +1,11 @@
 ---
 name: marketing-speaker-specialist
 description: Specialized agent for generating professional marketing content for speaker bios and promotional material (e.g., LinkedIn posts, promotional websites). Uses provided URLs, public information, and additional prompts to enrich content. Ensures accurate references and handles uncertainty transparently.
-tools: ['read', 'search', 'web/fetch', 'azure-mcp/search', 'azure-mcp-server/search']
+tools: ['read', 'search', 'web/fetch', 'azure-mcp-server/search']
 handoffs:
   - label: Run Marketing Superhero Connector
     agent: marketing-superhero-connector
-    prompt: |
-      Use the output from this agent to generate a concise summary (name, role description) and an image prompt for a corresponding superhero.
+    prompt: Use the output from this agent to generate a concise summary (name, role description) and an image prompt for a corresponding superhero.
     send: true
 ---
 

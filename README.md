@@ -76,11 +76,24 @@ The agent will:
 Use the image generation script to create or edit images via Azure OpenAI:
 
 ```bash
+## Usage Examples
+
+### Generate a New Image from Text Prompt
+Creates a new image based on a text description using the `generate_with_az_rest.sh` script.
+
+**Syntax:**
 # Generate an image from a text prompt
 ./generate_with_az_rest.sh "photo realistic portrait of a tech speaker" "assets/speaker.png"
 
 # Edit an existing image
 ./generate_with_az_rest.sh "add a superhero cape" "assets/speaker_hero.png" "1024x1024" "assets/speaker.png"
+```
+
+Example
+```
+./generate_with_az_rest.sh \     
+  -i "./assets/yourimage.jpg" \
+  -p "Superhero Name: THE AUTOMATION ARCHITECT. Alter Ego: Your Name. Code Name: AutomationArch. Symbol: A stylized A made of flowing event streams with a penguin silhouette at its center. Transform this person into a superhero with these identity elements."
 ```
 
 > **Note:** This script requires Azure CLI authentication and access to an Azure OpenAI resource with an image model deployment.
